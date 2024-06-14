@@ -1,0 +1,220 @@
+.container {
+  position: relative;
+  width: auto;
+  height: auto;
+  margin: auto;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.smallContainer {
+  width: 6%;
+  height: 6%;
+  background-color: transparent;
+  z-index: 1;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.te {
+  top: 100%;
+}
+.tel {
+  top: 57%;
+  left: 35%;
+}
+.utt {
+  top: 21%;
+  left: 38%;
+  font-size: 10px;
+}
+.har {
+  top: 25%;
+  left: 35%;
+}
+
+.one {
+  left: 41%;
+  top: 61%;
+}
+
+.two {
+  left: 37.8%;
+  top: 27.6%;
+  z-index: 1;
+}
+
+.three {
+  left: 30%;
+  top: 32%;
+}
+
+.mapArrow {
+  font-size: 10px;
+  z-index: -5;
+  color: rgb(86, 9, 9);
+}
+
+.popup {
+  border-radius: 10px;
+  display: none; /* Ensure popup is hidden initially */
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  top: 0;
+  z-index: 1000;
+  width: 800%;
+  animation: ease-in 300ms;
+  z-index: 1000;
+}
+
+.smallContainer:hover .popup {
+  display: block; /* Show popup on hover */
+}
+
+.smallContainer:hover .mapArrow {
+  display: none;
+}
+
+/* Adjusted positions and styles for two popups */
+.popup.onetab {
+  left: calc(100% - 200px); /* Ensure they appear side by side */
+  top: calc(100% - 200px);
+  z-index: 1010;
+}
+
+.popup.twotab {
+  left: calc(100% - 200px); /* Adjust as needed for spacing */
+  top: calc(100% + 70px);
+  z-index: 1010;
+}
+
+@media (max-width: 768px) {
+  .smallContainer {
+    width: 8%;
+    height: 8%;
+  }
+
+  .one {
+    left: 39%;
+    top: 60%;
+  }
+
+  .two {
+    left: 36.7%;
+    top: 26.5%;
+  }
+
+  .three {
+    left: 30%;
+    top: 30%;
+  }
+  .tel {
+    top: 55%;
+    left: 34%;
+  }
+
+  .popup {
+    z-index: 10;
+    width: 60vw;
+    height: 60vh;
+  }
+
+  .mapArrow {
+    font-size: 6px;
+  }
+
+  /* Adjusted positions for responsive view */
+  .popup.onetab {
+    left: calc(100% + 10px);
+    z-index: 10;
+  }
+
+  .popup.twotab {
+    left: calc(100% + 10px);
+    z-index: 10;
+  }
+}
+
+@media (max-width: 640px) {
+  .smallContainer {
+    width: 10%;
+    height: 10%;
+  }
+  .mapArrow {
+    font-size: 12px;
+  }
+
+  .one {
+    left: 39%;
+    top: 59%;
+  }
+
+  .two {
+    left: 35.7%;
+    top: 25.5%;
+  }
+  .tel {
+    top: 54%;
+    left: 34%;
+  }
+  .three {
+    top: 35%;
+    left: 29%;
+  }
+
+  .utt {
+    top: 18%;
+    left: 37%;
+  }
+  .har {
+    top: 23%;
+    left: 34%;
+  }
+
+  .mapArrow {
+    font-size: 5px;
+    z-index: -5;
+    color: rgb(55, 11, 11);
+  }
+
+  .popup {
+    width: 60vw;
+    height: 40vh;
+    overflow: auto;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .popup h1 {
+    font-size: 1.2em;
+  }
+
+  .popup p {
+    font-size: 0.9em;
+  }
+
+  .popup iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Adjusted positions for responsive view */
+  .popup.onetab {
+    left: calc(100% - 100px);
+    top: calc(100% - 270px);
+  }
+
+  .popup.twotab {
+    left: calc(100% - 100px);
+    top: calc(100% + 100px);
+  }
+}

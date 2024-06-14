@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap");
+
+@layer utilities {
+  .animate-zoom {
+    animation: zoom 0.3s ease-out;
+  }
+
+  .bgimage {
+    background: url("/public/doodle.jpeg");
+    background-size: cover;
+  }
+
+  .paused {
+    animation-play-state: paused;
+  }
+
+  .c-size {
+    height: 460px;
+  }
+  .w-size {
+    width: 560px;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  @keyframes zoom {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .jakarta {
+    font-family: var(--font-montserrat);
+  }
+  .playfair_display {
+    font-family: var(--font-playfair_display);
+  }
+}
